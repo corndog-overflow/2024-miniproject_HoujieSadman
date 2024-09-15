@@ -15,9 +15,9 @@ N: int = 10
 sample_ms = 10.0
 on_ms = 500
 
-WRITE_KEY = "X8JXYKFA4WK17HNB"
-HOTSPOT_PASS = "29032085"
-SSID = "SDK"
+WRITE_KEY = "SECRET_KEY"
+HOTSPOT_PASS = "SECRET_PASS"
+SSID = "SECRET_SSID"
 
 
 def conn_to_wifi(ssid, passk):
@@ -153,3 +153,4 @@ if __name__ == "__main__":
 #     
     
 #     #send data to database
+
