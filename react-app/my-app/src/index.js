@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { initializeApp } from "firebase/app";
-
-import { getAnalytics } from "firebase/analytics";
 
 // TODO: Add SDKs for Firebase products that you want to use
 
@@ -16,30 +13,10 @@ import { getAnalytics } from "firebase/analytics";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-const firebaseConfig = {
-
-  apiKey: "AIzaSyAvUal2Xr2qGoR2oS1UEnDhHYJLTpPY0gU",
-
-  authDomain: "sdk-seniordesign.firebaseapp.com",
-
-  projectId: "sdk-seniordesign",
-
-  storageBucket: "sdk-seniordesign.appspot.com",
-
-  messagingSenderId: "431723260228",
-
-  appId: "1:431723260228:web:0efb842e46ebee70b50f11",
-
-  measurementId: "G-QP51QKWGRB"
-
-};
 
 
-// Initialize Firebase
 
-const app = initializeApp(firebaseConfig);
 
-const analytics = getAnalytics(app);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
