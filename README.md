@@ -7,7 +7,6 @@
 
 
 10 LED BLinks and reaction time measured, then sorted into min, max and avg.
-
 This data is then sent to our database via HTTPS REST API from ThingSpeak.
 
 In our REACT Web app, we then fetch that data and do so every 5 seconds to update constantly:
