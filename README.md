@@ -1,5 +1,6 @@
 # SADMAN KABIR, HOUJIE XIONG MINI PROJECT
 # THIS README IS A COPY OF Report.md IN THE REPO
+*** API KEYS are obfuscated via environment variable, running this project will not work without the actual API keys which are not included in this repo.
 
 # EXERCISE 1
 
