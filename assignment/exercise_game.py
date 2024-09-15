@@ -15,9 +15,9 @@ N: int = 10
 sample_ms = 10.0
 on_ms = 500
 
-WRITE_KEY = "SECRET_KEY"
-HOTSPOT_PASS = "SECRET_PASS"
-SSID = "SECRET_SSID"
+WRITE_KEY = "YLMMTXOTYLNP4Q6M"
+HOTSPOT_PASS = "29032085"
+SSID = "SDK"
 
 
 def conn_to_wifi(ssid, passk):
@@ -28,7 +28,7 @@ def conn_to_wifi(ssid, passk):
         while wlan.isconnected() == False:
             print('Waiting for connection...')
             time.sleep(1)
-        print(wlan.ifconfig())
+#         print(wlan.ifconfig())
     except Exception as e:
         print(e)
 def push(data, field, key = WRITE_KEY):

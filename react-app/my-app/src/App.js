@@ -10,6 +10,37 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
+//get hardware data
+
+const secret_key = "SECRET_KEY"
+
+function fetchData() {
+  fetch(`https://api.thingspeak.com/channels/2657449/fields/1.json?api_key=${secret_key}&results=3`)
+    .then(res_fast => res_fast.json())
+    .then(data => {
+      console.log(data["feeds"][0]);
+      document.getElementById("fast").innerText = data["feeds"][0]["field1"];
+    });
+
+  fetch(`https://api.thingspeak.com/channels/2657449/fields/2.json?api_key=${secret_key}&results=3`)
+    .then(res_fast => res_fast.json())
+    .then(data => {
+      console.log(data["feeds"][1]);
+      document.getElementById("slow").innerText = data["feeds"][1]["field2"];
+    });
+
+  fetch(`https://api.thingspeak.com/channels/2657449/fields/3.json?api_key=${secret_key}&results=3`)
+    .then(res_fast => res_fast.json())
+    .then(data => {
+      console.log(data["feeds"][2]);
+      document.getElementById("avg").innerText = data["feeds"][2]["field3"];
+    });
+}
+
+setInterval(fetchData, 5000);
+
+fetchData();
+
 function App() {
   return (
     <div className="App">
@@ -19,7 +50,12 @@ function App() {
         <p>
           Welcome to Sadman and Houjie's senior design mini project.
         </p>
-        <p> Latest data from hardware: </p>
+        <p>
+        Latest data from hardware <br></br>
+          Fastest Time: <span id = "fast">[NO DATA FOUND]</span>ms <br></br>
+          Slowest Time: <span id = "slow">[NO DATA FOUND]</span>ms <br></br>
+          Average Time: <span id = "avg">[NO DATA FOUND]</span>ms <br></br>
+        </p>
       </header>
       
     </div>
