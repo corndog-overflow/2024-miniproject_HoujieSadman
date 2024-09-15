@@ -1,30 +1,23 @@
-# 2024 Fall Miniproject
+# SADMAN KABIR HOUJIE MINI PROJECT
+# ALL EXERCISES COMPLETE
 
-[ASSIGNMENT](./assignment/)
+#FOR EXERCISE 3; HOW IT WORKS:
 
-This project uses the Raspberry Pi Pico WH (wireless, with header pins).
-
-Each student must provide a USB cable that connects to their laptop and has a micro-USB connector on the other end to plug into the Pi Pico.
-The student laptop is used to program the Pi Pico.
-The laptop software works on macOS, Windows, and Linux.
-
-This miniproject focuses on using
-[MicroPython](./doc/micropython.md)
-using
-[Thonny IDE](./doc/thonny.md).
-Other IDE can be used, including Visual Studio Code or
-[rshell](./doc/rshell.md).
-
-## Hardware
-
-* Raspberry Pi Pico WH [SC0919](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#raspberry-pi-pico-w-and-pico-wh) (WiFi, Bluetooth, with header pins)
-* Freenove Pico breakout board [FNK0081](https://store.freenove.com/products/fnk0081)
-* Speaker 8 ohm 800 mW [SP-1605](https://www.soberton.com/wp-content/uploads/2018/07/SP-1605-June-2018.pdf)
-* [Photoresistor](./doc/photocell.md) and 10k ohm resistor
-* 2 [tactile switches](https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/184/TL59-TL58.pdf)
+![image](https://github.com/user-attachments/assets/4a33befa-2534-47be-85bd-41dadd4cd1bb)
 
 
-## Reference
+10 LED BLinks and reaction time measured, then sorted into min, max and avg.
 
-* [Pico WH pinout diagram](https://datasheets.raspberrypi.com/picow/PicoW-A4-Pinout.pdf) shows the connections to analog and digital IO.
-* Getting Started with Pi Pico [book](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)
+This data is then sent to our database via HTTPS REST API from ThingSpeak.
+
+In our REACT Web app, we then fetch that data and do so every 5 seconds to update constantly:
+
+![image](https://github.com/user-attachments/assets/6964ea49-5252-487a-93af-e1f1d1f28f1a)
+
+
+
+Resulting in the following:
+
+![image](https://github.com/user-attachments/assets/16a4e3be-0798-4fc9-97be-abdc6e8ba091)
+
+
