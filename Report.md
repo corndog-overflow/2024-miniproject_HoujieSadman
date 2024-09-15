@@ -1,15 +1,15 @@
 # SADMAN KABIR, HOUJIE XIONG MINI PROJECT
 
-#EXERCISE 1
+# EXERCISE 1
 
 I found max_bright = 50000, min_bright = 13000 to work well.
 
 
-#EXERCISE 2:
+# EXERCISE 2:
 
 Code found in exercise_sound.py, it plays the intro to toccata and fugue in d minor.
 
-#EXERCISE 3; HOW IT WORKS:
+# EXERCISE 3; HOW IT WORKS:
 
 ![image](https://github.com/user-attachments/assets/4a33befa-2534-47be-85bd-41dadd4cd1bb)
 
