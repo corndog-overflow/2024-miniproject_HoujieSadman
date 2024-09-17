@@ -147,7 +147,8 @@ if __name__ == "__main__":
     push(data[0], 1) #pushing fastest speed (field 1 is to store fastest reaction time among 10 tests)
     push(data[1], 2) #pushing slowest speed (field 2 is to store slowest reaction time among 10 tests)
     push(data[2], 3) #pushing avg speed     (field 3 is to store average reaction time among 10 tests)
-    push(data[3], 4) #pushing score         (field 3 is to store average reaction time among 10 tests)
+    push(data[3], 4) #pushing score         (field 4 is to store score among 10 tests)
+
     print("Data push complete ")
 #
 
