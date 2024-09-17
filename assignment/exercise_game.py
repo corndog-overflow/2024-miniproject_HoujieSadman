@@ -31,7 +31,8 @@ def conn_to_wifi(ssid, passk):
 #         print(wlan.ifconfig())
     except Exception as e:
         print(e)
-def push(data, field, key = WRITE_KEY):
+def push(data, field, key = WRITE_KEY): 
+    # this function is to push our date to certain field we want
     WRITE_URL = f"http://api.thingspeak.com/update.json?api_key={key}&field{field}={data}"
     print("\n Pushing to database... ")
     request = urequests.post(WRITE_URL)
@@ -76,7 +77,7 @@ def scorer(t: list[int | None]) -> None:
     # %% collate results
     misses = t.count(None)
     print(f"You missed the light {misses} / {len(t)} times")
-   
+    score=10-misses
 
     t_good = [x for x in t if x is not None]
    
@@ -87,9 +88,10 @@ def scorer(t: list[int | None]) -> None:
     print("Your fastest time was:  " + str(min(t_good))+ "ms! \n")
     print("Your slowest time was: hold " +str(max(t_good))+ "ms! \n")
     print("Your average time was: hold " + str(sum(t_good)/len(t_good))+"ms! \n")
+    print("Your score was: hold " + str(score)+"! \n")
     
     print(t_good)
-    data = {"fastest-time":(min(t_good)), "slowest-time":(max(t_good)), "average-time":(sum(t_good)/len(t_good))}
+    data = {"fastest-time":(min(t_good)), "slowest-time":(max(t_good)), "average-time":(sum(t_good)/len(t_good)), "score":(score)}
 
     # %% make dynamic filename and write JSON
 
@@ -101,7 +103,7 @@ def scorer(t: list[int | None]) -> None:
     print("write", filename)
 
     write_json(filename, data)
-    return min(t_good), max(t_good), sum(t_good)/len(t_good)
+    return min(t_good), max(t_good), sum(t_good)/len(t_good), score 
     #print(write_json(filename, data))
 
 
@@ -118,7 +120,7 @@ if __name__ == "__main__":
     t: list[int | None] = []
 
     blinker(3, led)
-
+    #game start
     for i in range(N):
         time.sleep(random_time_interval(0.5, 5.0))
 
@@ -136,13 +138,16 @@ if __name__ == "__main__":
         led.low()
 
     blinker(5, led)
-
+    
+    #upload data
+    
     data = scorer(t)
     conn_to_wifi(SSID, HOTSPOT_PASS)
     time.sleep(1)
-    push(data[0], 1) #pushing fastest speed
-    push(data[1], 2) #pushing slowest speed
-    push(data[2], 3) #pushing avg speed
+    push(data[0], 1) #pushing fastest speed (field 1 is to store fastest reaction time among 10 tests)
+    push(data[1], 2) #pushing slowest speed (field 2 is to store slowest reaction time among 10 tests)
+    push(data[2], 3) #pushing avg speed     (field 3 is to store average reaction time among 10 tests)
+    push(data[3], 4) #pushing score         (field 3 is to store average reaction time among 10 tests)
     print("Data push complete ")
 #
 

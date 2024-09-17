@@ -29,16 +29,16 @@ def quiet() -> None:
 
 # Define notes and their frequencies
 notes = {
-    "1":494,
-    "2":440,
-    "wait" : 0,
-    "3": 783/2,
-    "4": 739/2,
-    "5": 659/2,
-    "6": 311,
-    "7": 311,
-    "8": 246,
-    "9": 220
+    "1":494.0,
+    "2":440.0,
+    "wait" : 0.0,
+    "3": 783.0/2,
+    "4": 739.0/2,
+    "5": 659.0/2,
+    "6": 311.0,
+    "7": 311.0,
+    "8": 246.0,
+    "9": 220.0
 }
 
 song = [
@@ -51,7 +51,7 @@ song = [
     ("4", 0.185),
     ("5", 0.185),
     ("6", 0.185*3),
-    ("5", 0.185*2)
+    ("5", 0.185*3)
     
 ]
 
@@ -61,7 +61,7 @@ for note, duration in song:
         if frequency == 0:
             quiet()
         else:
-            playtone(int(frequency*1.1), duration)
+            playtone(int(frequency), duration)
     utime.sleep(0.05)  
 
 quiet()
