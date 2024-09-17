@@ -77,7 +77,7 @@ def scorer(t: list[int | None]) -> None:
     # %% collate results
     misses = t.count(None)
     print(f"You missed the light {misses} / {len(t)} times")
-    score=10-misses
+    score=(10.0-misses)/10
 
     t_good = [x for x in t if x is not None]
    
