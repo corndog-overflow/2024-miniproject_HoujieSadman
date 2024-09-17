@@ -13,11 +13,12 @@ Code found in exercise_sound.py, it plays the intro to toccata and fugue in d mi
 
 # EXERCISE 3; HOW IT WORKS:
 
+1. N = 10 LED BLinks and reaction time measured, then sorted into min, max and avg;
+   This data is then sent to our ThingSpeak database via HTTPS REST API call.
+
 ![image](https://github.com/user-attachments/assets/4a33befa-2534-47be-85bd-41dadd4cd1bb)
 
 
-1. N = 10 LED BLinks and reaction time measured, then sorted into min, max and avg;
-   This data is then sent to our ThingSpeak database via HTTPS REST API call.
 
 ![image](https://github.com/user-attachments/assets/c78d1bde-5969-4155-a153-a998cdf23cc3)
 Our data, visualized in our database.
