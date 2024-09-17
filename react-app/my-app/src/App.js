@@ -12,24 +12,25 @@ import { getAnalytics } from "firebase/analytics";
 
 //get hardware data
 
-const secret_key = "SECRET_KEY"
+const secret_key = "MBHJQKMNNFV2L7F3"
+
 
 function fetchData() {
-  fetch(`https://api.thingspeak.com/channels/2657449/fields/1.json?api_key=${secret_key}&results=4`)
+  fetch(`https://api.thingspeak.com/channels/2657449/fields/1.json?api_key=${secret_key}&results=3`)
     .then(res_fast => res_fast.json())
     .then(data => {
       console.log(data["feeds"][0]);
       document.getElementById("fast").innerText = data["feeds"][0]["field1"];
     });
 
-  fetch(`https://api.thingspeak.com/channels/2657449/fields/2.json?api_key=${secret_key}&results=4`)
+  fetch(`https://api.thingspeak.com/channels/2657449/fields/2.json?api_key=${secret_key}&results=3`)
     .then(res_fast => res_fast.json())
     .then(data => {
       console.log(data["feeds"][1]);
       document.getElementById("slow").innerText = data["feeds"][1]["field2"];
     });
 
-  fetch(`https://api.thingspeak.com/channels/2657449/fields/3.json?api_key=${secret_key}&results=4`)
+  fetch(`https://api.thingspeak.com/channels/2657449/fields/3.json?api_key=${secret_key}&results=3`)
     .then(res_fast => res_fast.json())
     .then(data => {
       console.log(data["feeds"][2]);
@@ -43,7 +44,7 @@ function fetchData() {
     });
 }
 
-setInterval(fetchData, 5000);
+// setInterval(fetchData, 5000);
 
 fetchData();
 
