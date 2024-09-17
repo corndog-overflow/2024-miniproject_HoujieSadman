@@ -1,4 +1,6 @@
 # SADMAN KABIR, HOUJIE XIONG MINI PROJECT
+# THIS README IS A COPY OF Report.md IN THE REPO
+*** API KEYS are obfuscated via environment variable, running this project will not work without the actual API keys which are not included in this repo.
 
 # EXERCISE 1
 
@@ -11,11 +13,17 @@ Code found in exercise_sound.py, it plays the intro to toccata and fugue in d mi
 
 # EXERCISE 3; HOW IT WORKS:
 
+1. N = 10 LED BLinks and reaction time measured, then sorted into min, max and avg;
+   This data is then sent to our ThingSpeak database via HTTPS REST API call.
+
 ![image](https://github.com/user-attachments/assets/4a33befa-2534-47be-85bd-41dadd4cd1bb)
 
 
-1. N = 10 LED BLinks and reaction time measured, then sorted into min, max and avg;
-   This data is then sent to our ThingSpeak database via HTTPS REST API call.
+
+![image](https://github.com/user-attachments/assets/c78d1bde-5969-4155-a153-a998cdf23cc3)
+Our data, visualized in our database.
+
+   
 
 2. In our REACT Web app, we then fetch that data and do so every 5 seconds to update constantly:
 
