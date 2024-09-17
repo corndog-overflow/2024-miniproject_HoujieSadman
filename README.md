@@ -19,7 +19,12 @@ Code found in exercise_sound.py, it plays the intro to toccata and fugue in d mi
 1. N = 10 LED BLinks and reaction time measured, then sorted into min, max and avg;
    This data is then sent to our ThingSpeak database via HTTPS REST API call.
 
-2. In our REACT Web app, we then fetch that data and do so every 5 seconds to update constantly:
+![image](https://github.com/user-attachments/assets/c78d1bde-5969-4155-a153-a998cdf23cc3)
+Our data, visualized in our database.
+
+   
+
+3. In our REACT Web app, we then fetch that data and do so every 5 seconds to update constantly:
 
 ![image](https://github.com/user-attachments/assets/6964ea49-5252-487a-93af-e1f1d1f28f1a)
 
