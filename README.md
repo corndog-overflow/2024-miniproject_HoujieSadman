@@ -5,13 +5,18 @@
 # EXERCISE 1
 
 I found max_bright = 50000, min_bright = 13000 to work well.
+Video: https://drive.google.com/file/d/1poDTyKDpKiJNFNspiosgc4Bz6xrph9xx/view?usp=sharing
 
 
 # EXERCISE 2:
 
 Code found in exercise_sound.py, it plays the intro to toccata and fugue in d minor.
+Video: https://drive.google.com/file/d/19Zg6qp6rDTfPMSJX8wQfVWdqUt--pyr8/view?usp=sharing
+
 
 # EXERCISE 3; HOW IT WORKS:
+
+Video: https://drive.google.com/file/d/11qYbl1SCVdqrzu1bXacUKSWjNf5vF1U7/view?usp=sharing
 
 1. N = 10 LED BLinks and reaction time measured, then sorted into min, max and avg;
    This data is then sent to our ThingSpeak database via **HTTPS REST API call.**
