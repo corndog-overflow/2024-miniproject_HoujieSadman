@@ -77,7 +77,7 @@ def scorer(t: list[int | None]) -> None:
     # %% collate results
     misses = t.count(None)
     print(f"You missed the light {misses} / {len(t)} times")
-   
+    score=(10.0-misses)/10
 
     t_good = [x for x in t if x is not None]
    
@@ -88,9 +88,10 @@ def scorer(t: list[int | None]) -> None:
     print("Your fastest time was:  " + str(min(t_good))+ "ms! \n")
     print("Your slowest time was: hold " +str(max(t_good))+ "ms! \n")
     print("Your average time was: hold " + str(sum(t_good)/len(t_good))+"ms! \n")
+    print("Your score was: hold " + str(score)+"! \n")
     
     print(t_good)
-    data = {"fastest-time":(min(t_good)), "slowest-time":(max(t_good)), "average-time":(sum(t_good)/len(t_good))}
+    data = {"fastest-time":(min(t_good)), "slowest-time":(max(t_good)), "average-time":(sum(t_good)/len(t_good)), "score":(score)}
 
     # %% make dynamic filename and write JSON
 
@@ -102,7 +103,7 @@ def scorer(t: list[int | None]) -> None:
     print("write", filename)
 
     write_json(filename, data)
-    return min(t_good), max(t_good), sum(t_good)/len(t_good)
+    return min(t_good), max(t_good), sum(t_good)/len(t_good), score 
     #print(write_json(filename, data))
 
 
@@ -146,6 +147,8 @@ if __name__ == "__main__":
     push(data[0], 1) #pushing fastest speed (field 1 is to store fastest reaction time among 10 tests)
     push(data[1], 2) #pushing slowest speed (field 2 is to store slowest reaction time among 10 tests)
     push(data[2], 3) #pushing avg speed     (field 3 is to store average reaction time among 10 tests)
+    push(data[3], 4) #pushing score         (field 4 is to store score among 10 tests)
+
     print("Data push complete ")
 #
 
