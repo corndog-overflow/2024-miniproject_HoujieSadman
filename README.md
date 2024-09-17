@@ -25,7 +25,7 @@ Our data, visualized in our database.
 
    
 
-3. In our REACT Web app, we then fetch that data and do so every 5 seconds to update constantly:
+2. In our REACT Web app, we then fetch that data and do so every 5 seconds to update constantly:
 
 ![image](https://github.com/user-attachments/assets/6964ea49-5252-487a-93af-e1f1d1f28f1a)
 
