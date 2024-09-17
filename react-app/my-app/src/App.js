@@ -12,7 +12,7 @@ import { getAnalytics } from "firebase/analytics";
 
 //get hardware data
 
-const secret_key = "MBHJQKMNNFV2L7F3"
+const secret_key = "SECRET_KEY"
 
 
 function fetchData() {
