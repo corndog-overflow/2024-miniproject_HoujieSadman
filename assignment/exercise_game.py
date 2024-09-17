@@ -31,7 +31,8 @@ def conn_to_wifi(ssid, passk):
 #         print(wlan.ifconfig())
     except Exception as e:
         print(e)
-def push(data, field, key = WRITE_KEY):
+def push(data, field, key = WRITE_KEY): 
+    # this function is to push our date to certain field we want
     WRITE_URL = f"http://api.thingspeak.com/update.json?api_key={key}&field{field}={data}"
     print("\n Pushing to database... ")
     request = urequests.post(WRITE_URL)
@@ -118,7 +119,7 @@ if __name__ == "__main__":
     t: list[int | None] = []
 
     blinker(3, led)
-
+    #game start
     for i in range(N):
         time.sleep(random_time_interval(0.5, 5.0))
 
@@ -136,13 +137,15 @@ if __name__ == "__main__":
         led.low()
 
     blinker(5, led)
-
+    
+    #upload data
+    
     data = scorer(t)
     conn_to_wifi(SSID, HOTSPOT_PASS)
     time.sleep(1)
-    push(data[0], 1) #pushing fastest speed
-    push(data[1], 2) #pushing slowest speed
-    push(data[2], 3) #pushing avg speed
+    push(data[0], 1) #pushing fastest speed (field 1 is to store fastest reaction time among 10 tests)
+    push(data[1], 2) #pushing slowest speed (field 2 is to store slowest reaction time among 10 tests)
+    push(data[2], 3) #pushing avg speed     (field 3 is to store average reaction time among 10 tests)
     print("Data push complete ")
 #
 
