@@ -5,7 +5,8 @@
 # EXERCISE 1
 
 I found max_bright = 50000, min_bright = 13000 to work well.
-The video demonstrates how a photocell behaves in two different scenarios: under sunlight and in darkness. It also shows how the duty cycle varies in each condition.
+
+The video below demonstrates how a photocell behaves in two different scenarios: under sunlight and in darkness. It also shows how the duty cycle varies in each condition.
 
 Video: https://drive.google.com/file/d/1poDTyKDpKiJNFNspiosgc4Bz6xrph9xx/view?usp=sharing
 
@@ -13,6 +14,9 @@ Video: https://drive.google.com/file/d/1poDTyKDpKiJNFNspiosgc4Bz6xrph9xx/view?us
 # EXERCISE 2:
 
 Code found in exercise_sound.py, it plays the intro to toccata and fugue in d minor.
+
+The video below demonstrates that our sound component is functioning properly.
+
 Video: https://drive.google.com/file/d/19Zg6qp6rDTfPMSJX8wQfVWdqUt--pyr8/view?usp=sharing
 
 
